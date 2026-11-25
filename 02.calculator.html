@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont {
+            border: 2px solid black;
+            height: 700px;
+            width: 400px;
+            margin: auto;
+            margin-top: 10;          
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            background-color: #1C1C1C;
+        }
+
+        .num {
+            border: 1px solid transparent;
+            height: 120px;
+            flex-basis: 100%;
+            font-size: 100px;
+            display: flex;
+            justify-content: right;
+            align-items: center;         
+            font-family: sans-serif;
+            color: white;
+
+        }
+
+        .circle {
+            border: 1px solid black;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+        .circle-r{
+            border: 1px solid black;
+            height: 80px;
+            width: 170px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+        .cont div:nth-child(4n+5),div:nth-child(20){
+            background-color: #FF9500;
+            color: white;
+        }
+        .cont div:nth-child(n+6):nth-child(-n+8),div:nth-child(n+10):nth-child(-n+12),div:nth-child(n+14):nth-child(-n+16),div:nth-child(n+18):nth-child(-n+19){
+            background-color: #505050;
+            color: white;
+        }
+        .cont div:nth-child(n+2):nth-child(-n+4){
+            background-color: #A2A2A2;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="num">7744</div>
+        <div class="circle">C</div>
+        <div class="circle">+/-</div>
+        <div class="circle">%</div>
+        <div class="circle">/</div>
+        <div class="circle">7</div>
+        <div class="circle">8</div>
+        <div class="circle">9</div>
+        <div class="circle">x</div>
+        <div class="circle">4</div>
+        <div class="circle">5</div>
+        <div class="circle">6</div>
+        <div class="circle">-</div>
+        <div class="circle">1</div>
+        <div class="circle">2</div>
+        <div class="circle">3</div>
+        <div class="circle">+</div>
+        <div class="circle-r">0</div>
+        <div class="circle">.</div>
+        <div class="circle">=</div>
+    </div>
+</body>
+
+</html>

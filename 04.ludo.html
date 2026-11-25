@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Board</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cont {
+            border: 2px solid black;
+            width: 750px;
+            height:750px;
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            grid-template-rows: repeat(15, 1fr);
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .homediv {
+            width: 66.666%;
+            height: 66.666%;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-between;
+        }
+
+        .fcircle {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .circle {
+            width: 25%;
+            height:50%;
+            border: 3px solid black;
+            border-radius: 50%;
+        }
+
+        .miniv {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+
+        .minih {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .hsmallbox {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hsmallbox svg {
+            width: 70%;
+            height: 70%;
+        }
+
+        .center {
+            border: 1px solid black;
+            display: grid;
+        }
+
+        .triangle {
+            grid-area: 1 / 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .triangle.top {
+            background-color: green;
+            clip-path: polygon(0 0, 100% 0, 50% 50%);
+        }
+
+        .triangle.right {
+            background-color: yellow;
+            clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+        }
+
+        .triangle.bottom {
+            background-color: blue;
+            clip-path: polygon(100% 100%, 0 100%, 50% 50%);
+        }
+
+        .triangle.left {
+            background-color: red;
+            clip-path: polygon(0 100%, 0 0, 50% 50%);
+        }
+
+
+        .cont > .home:nth-child(1) {
+            grid-area: 1 / 1 / 7 / 7;
+        }
+
+
+        .cont > .miniv:nth-child(2) {
+            grid-area: 1 / 7 / 7 / 10;
+        }
+
+
+        .cont > .home:nth-child(3) {
+            grid-area: 1 / 10 / 7 / 16;
+        }
+
+        
+        .cont > .minih:nth-child(4) {
+            grid-area: 7 / 1 / 10 / 7;
+        }
+
+        .cont > .center:nth-child(5) {
+            grid-area: 7 / 7 / 10 / 10;
+        }
+
+        .cont > .minih:nth-child(6) {
+            grid-area: 7 / 10 / 10 / 16;
+        }
+
+        .cont > .home:nth-child(7) {
+            grid-area: 10 / 1 / 16 / 7;
+        }
+
+        .cont > .miniv:nth-child(8) {
+            grid-area: 10 / 7 / 16 / 10;
+        }
+
+        .cont > .home:nth-child(9) {
+            grid-area: 10 / 10 / 16 / 16;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="cont">
+
+        <div class="home" style="background-color: red;">
+            <div class="homediv">
+                <div class="fcircle">
+                    <div class="circle" style="border-color: red;"></div>
+                    <div class="circle" style="border-color: red;"></div>
+                </div>
+
+                <div class="fcircle">
+                    <div class="circle" style="border-color: red;"></div>
+                    <div class="circle" style="border-color: red;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="miniv">
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: green;"></div>
+            <div class="hsmallbox" style="background-color: green;"><svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><path d="M16 4.588l2.833 8.719H28l-7.416 5.387 2.832 8.719L16 22.023l-7.417 5.389 2.833-8.719L4 13.307h9.167L16 4.588z"></path></g></svg></div>
+            <div class="hsmallbox" style="background-color: green;"><svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><path d="M16 4.588l2.833 8.719H28l-7.416 5.387 2.832 8.719L16 22.023l-7.417 5.389 2.833-8.719L4 13.307h9.167L16 4.588z"></path></g></svg></div>
+            <div class="hsmallbox" style="background-color: green;"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: green;"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: green;"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: green;"></div>
+            <div class="hsmallbox"></div>
+        </div>
+
+        <div class="home" style="background-color: green;">
+            <div class="homediv">
+                <div class="fcircle">
+                    <div class="circle" style="border-color: green;"></div>
+                    <div class="circle" style="border-color: green;"></div>
+                </div>
+
+                <div class="fcircle">
+                    <div class="circle" style="border-color: green;"></div>
+                    <div class="circle" style="border-color: green;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="minih">
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: red;"><svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><path d="M16 4.588l2.833 8.719H28l-7.416 5.387 2.832 8.719L16 22.023l-7.417 5.389 2.833-8.719L4 13.307h9.167L16 4.588z"></path></g></svg></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: red;"></div>
+            <div class="hsmallbox" style="background-color: red;"></div>
+            <div class="hsmallbox" style="background-color: red;"></div>
+            <div class="hsmallbox" style="background-color: red;"></div>
+            <div class="hsmallbox" style="background-color: red;"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: red;"><svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><path d="M16 4.588l2.833 8.719H28l-7.416 5.387 2.832 8.719L16 22.023l-7.417 5.389 2.833-8.719L4 13.307h9.167L16 4.588z"></path></g></svg></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+        </div>
+
+        <div class="center">
+            <div class="triangle top"></div>
+            <div class="triangle right"></div>
+            <div class="triangle bottom"></div>
+            <div class="triangle left"></div>
+        </div>
+
+        <div class="minih">
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: yellow;"><svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><path d="M16 4.588l2.833 8.719H28l-7.416 5.387 2.832 8.719L16 22.023l-7.417 5.389 2.833-8.719L4 13.307h9.167L16 4.588z"></path></g></svg></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: yellow;"></div>
+            <div class="hsmallbox" style="background-color: yellow;"></div>
+            <div class="hsmallbox" style="background-color: yellow;"></div>
+            <div class="hsmallbox" style="background-color: yellow;"></div>
+            <div class="hsmallbox" style="background-color: yellow;"></div>
+            <div class="hsmallbox" style="background-color: yellow;"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: yellow;"><svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><path d="M16 4.588l2.833 8.719H28l-7.416 5.387 2.832 8.719L16 22.023l-7.417 5.389 2.833-8.719L4 13.307h9.167L16 4.588z"></path></g></svg></div>
+            <div class="hsmallbox"></div>
+        </div>
+
+        <div class="home" style="background-color: blue;">
+            <div class="homediv">
+                <div class="fcircle">
+                    <div class="circle" style="border-color: blue;"></div>
+                    <div class="circle" style="border-color: blue;"></div>
+                </div>
+
+                <div class="fcircle">
+                    <div class="circle" style="border-color: blue;"></div>
+                    <div class="circle" style="border-color: blue;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="miniv">
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: blue;"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: blue;"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: blue;"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox" style="background-color: blue;"></div>
+            <div class="hsmallbox" style="background-color: blue;"><svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><path d="M16 4.588l2.833 8.719H28l-7.416 5.387 2.832 8.719L16 22.023l-7.417 5.389 2.833-8.719L4 13.307h9.167L16 4.588z"></path></g></svg></div>
+            <div class="hsmallbox" style="background-color: blue;"><svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><path d="M16 4.588l2.833 8.719H28l-7.416 5.387 2.832 8.719L16 22.023l-7.417 5.389 2.833-8.719L4 13.307h9.167L16 4.588z"></path></g></svg></div>
+            <div class="hsmallbox" style="background-color: blue;"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+            <div class="hsmallbox"></div>
+        </div>
+
+        <div class="home" style="background-color: yellow;">
+            <div class="homediv">
+                <div class="fcircle">
+                    <div class="circle" style="border-color: yellow;"></div>
+                    <div class="circle" style="border-color: yellow;"></div>
+                </div>
+
+                <div class="fcircle">
+                    <div class="circle" style="border-color: yellow;"></div>
+                    <div class="circle" style="border-color: yellow;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

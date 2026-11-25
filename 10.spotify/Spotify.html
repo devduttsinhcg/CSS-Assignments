@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+          
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        aside {
+            height: inherit;
+            width: 18%;
+            background-color: #000000;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .logo{
+
+            height:10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo img{
+            height:80%;
+            width:80%;
+        }
+        .home{
+           
+            height:20%;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .home div{
+            
+            height:30%;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .home div img{
+            height:60%;
+       }
+        .create{
+            height:20%;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .create div{
+            height:30%;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;  
+        }
+        .create div img{
+            height:60%;
+       }
+        .extra{
+            height:35%;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .extra div{
+            height:15%;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+        .install{
+            height:5%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            gap:20px;
+        }
+        .install img{
+            height:60%;
+        }
+        .hero {
+            height: inherit;
+            width: 82%;
+            background-color: #202020;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        header {
+            height: 10%;
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .arrow {
+
+            height: 60%;
+            width: 20%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .arrow div {
+
+            height: 80%;
+            width: 2.9vw;
+            border-radius: 50%;
+            background-color: #131313;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile {
+            height: 50%;
+            width: 14%;
+            border-radius: 60px;
+            background-color: #0A0A0A;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-image: url(User.png);
+            background-repeat: no-repeat;
+        }
+
+        /* .profile div{
+            border: 1px solid green;
+            height: 100%;
+            width: 25%;
+            border-radius: 60px;
+        } */
+        .good {
+            height: 10%;
+            width: 95%;
+            font-size:30px;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .content {
+            height: 25%;
+            width: 95%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .playlist {
+            height: 10%;
+            width: 95%;
+            font-size:30px;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .card {
+     
+            height: 35%;
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content div {
+            border: 1px solid transparent;
+            height: 40%;
+            width: 23%;
+            display: flex;
+            border-radius: 4px;
+        }
+
+        .content div .photo {
+            width: 30%;
+            height: 100%;
+        }
+
+        .content div .text {
+            width: 70%;
+            height: 100%;
+            background-color: #303030;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 18px;
+            font-family:Arial, Helvetica, sans-serif ;
+            color: white;
+            text-align: center;
+        }
+
+        .card div {
+            width: 15%;
+            background-color: #181818;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 7px;
+        }
+
+        .card div .image {
+        
+            height: 50%;
+            width: 90%;
+            border-radius: 10px;
+        }
+        .image img {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card div .write {
+         
+            height: 30%;
+            width: 90%;
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 15px;
+            font-family:Arial, Helvetica, sans-serif ;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <aside>
+            <div class="logo">
+                <img src="Spotify logo.png" alt="">
+            </div>
+            <div class="home">
+                <div>
+                    <img src="Home.png" alt="">Home
+                </div>
+                <div>
+
+                    <img src="Search.png" alt="">Search
+                </div>
+                <div><img src="Your library.png" alt="">Library</div>
+            </div>
+            <div class="create">
+                <div>
+                    <img src="Create.png" alt="">Create Playlist
+                </div>
+                <div><img src="Liked.png" alt="">Liked Songs</div>
+                <div><img src="your episodes.png" alt="">Episodes</div>
+            </div>
+            <div class="extra">
+                <div>FAV</div>
+                <div>Daily Mix 1</div>
+                <div>DIscover Weekly</div>
+                <div>Malayalam</div>
+                <div>Dance/Electronic Mix</div>
+                <div>EDM/Popular</div>
+            </div>
+            <div class="install">
+                <img src="grommet-icons_install-option.png" alt="">Install App
+            </div>
+        </aside>
+
+        <div class="hero">
+
+            <header>
+                <div class="arrow">
+                    <div><svg width="25px" height="25px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z"
+                                    fill="#ffffff"></path>
+                            </g>
+                        </svg></div>
+                    <div><svg width="25px" height="25px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" fill="#ffffff" transform="rotate(180)">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z"
+                                    fill="#ffffff"></path>
+                            </g>
+                        </svg></div>
+                </div>
+                <div class="profile">
+                </div>
+            </header>
+
+            <div class="good">Good Morning</div>
+
+            <div class="content">
+
+                <div>
+                    <div class="photo">
+                        <img src="Liked.png" alt="">
+                    </div>
+                    <div class="text">Liked Songs</div>
+                </div>
+
+                <div>
+                    <div class="photo">
+                        <img src="image4.png" alt="">
+                    </div>
+                    <div class="text">Neffex Playlist</div>
+                </div>
+
+                <div>
+                    <div class="photo">
+                        <img src="image3.png" alt="">
+                    </div>
+                    <div class="text">K / Da</div>
+                </div>
+
+                <div>
+                    <div class="photo">
+                        <img src="image1.png" alt="">
+                    </div>
+                    <div class="text">Liked Songs</div>
+                </div>
+
+                <div>
+                    <div class="photo">
+                        <img src="image2.png" alt="">
+                    </div>
+                    <div class="text">Dance / Electronic Mix</div>
+                </div>
+
+            </div>
+
+            <div class="playlist">Shows you might like</div>
+
+            <div class="card">
+
+                <div>
+                    <div class="image">
+                        <img src="image9.png" alt="">
+                    </div>
+                    <div class="write">Weekly Motivation.. ben lna Scott</div>
+                </div>
+
+                <div>
+                    <div class="image">
+                        <img src="image8.png" alt="">
+                    </div>
+                    <div class="write">MEDITATION SELF lbn Hussain Aleep</div>
+                </div>
+
+                <div>
+                    <div class="image">
+                        <img src="image7.png" alt="">
+                    </div>
+                    <div class="write">Words beyond act... Samuel Scott</div>
+                </div>
+
+                <div>
+                    <div class="image">
+                        <img src="image6.png" alt="">
+                    </div>
+                    <div class="write">The Alexa Show Adriena Tom</div>
+                </div>
+
+                <div>
+                    <div class="image">
+                        <img src="image5.png" alt="">
+                    </div>
+                    <div class="write">The Stories of Ma... Lexus</div>
+                </div>
+
+                <div>
+                    <div class="image">
+                        <img src="image10.png" alt="">
+                    </div>
+                    <div class="write">Motivation Daily b... Georgina Martha</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

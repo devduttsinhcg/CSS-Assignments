@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont {
+            width: 100%;
+            height: auto;
+            border: 4px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 150px;
+            padding-bottom:50px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .hero {
+            border: 3px solid transparent;
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+
+        }
+
+        .nav {
+            border: 2px solid transparent;
+            height: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .kids {
+            border: 1px solid transparent;
+            height: 40px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-family: sans-serif;
+            font-weight: 550;
+        }
+
+        .o {
+            border: 4px solid black;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: yellow;
+        }
+
+        .cartitems {
+            border: 1px solid transparent;
+            height: 40px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-family: sans-serif;
+            font-weight: 550;
+        }
+
+        .cartitems img {
+            height: 35px;
+
+        }
+
+        .shop {
+            box-sizing: border-box;
+            padding-left: 80px;
+            border: 2px solid transparent;
+            height: 400px;
+            width: 100%;
+            background-image: url(kw-background.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+        }
+
+        .shop div {
+            border: 1px solid transparent;
+            height: 200px;
+            width: 300px;
+            color: white;
+            font-size: 70px;
+        }
+
+        .books {
+            border: 3px solid transparent;
+            height: auto;
+            width: inherit;
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            row-gap: 20px;
+        }
+
+        .discoverbooks {
+            border: 1px solid transparent;
+            height: 30px;
+            width: inherit;
+            font-size: 22px;
+
+        }
+
+        .bookitems {
+            border: 1px solid transparent;
+            height: 310px;
+            width: 150px;
+        }
+
+        .bimg {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(book1.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .cimg {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(book2.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .dimg {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(book3.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .eimg {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(book4.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .fimg {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(book5.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .gimg {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(book6.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .heading {
+            border: 1px solid transparent;
+            font-weight: 600;
+            font-family: sans-serif;
+            margin-top: 10px;
+        }
+
+        .para {
+            border: 1px solid transparent;
+            color: grey;
+            font-size: 13px;
+            font-family: sans-serif;
+            margin-top: 5px;
+        }
+
+        .price {
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: sans-serif;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .add {
+            border: 1px solid transparent;
+            background-color: #6196FF;
+            font-size: 20px;
+            width: 80px;
+            height: 35px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: sans-serif;
+
+        }
+
+        .games {
+            border: 3px solid transparent;
+            height: auto;
+            width: inherit;
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            row-gap: 20px;
+        }
+
+        .gameitems {
+            border: 1px solid transparent;
+            height: 310px;
+            width: 250px;
+        }
+
+        .discovergames {
+            border: 1px solid transparent;
+            height: 30px;
+            width: inherit;
+            font-size: 22px;
+
+        }
+
+        .dart {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(dart-board.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .four {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(connect-four.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .jenga {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(jenga.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .monopoly {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(monopoly.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .handmade {
+            border: 3px solid transparent;
+            height: auto;
+            width: inherit;
+            box-sizing: border-box;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            row-gap: 20px;
+        }
+
+        .handmadeitems {
+            border: 1px solid transparent;
+            height: 310px;
+            width: 250px;
+        }
+
+        .bookmarks {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(bookmarks.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            box-shadow: 0px 0px 3px black;
+
+        }
+
+        .birth {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(birthday-card.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            box-shadow: 0px 0px 3px black;
+        }
+
+        .stuffed {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(stuffed-toy.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            box-shadow: 0px 0px 3px black;
+        }
+
+        .dream {
+            width: inherit;
+            border: 1px solid transparent;
+            height: 220px;
+            border-radius: 10px;
+            background-image: url(dream-catcher.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            box-shadow: 0px 0px 3px black;
+        }
+
+        .discoverhandmade {
+            border: 1px solid transparent;
+            height: 30px;
+            width: inherit;
+            font-size: 22px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="hero">
+            <div class="nav">
+                <div class="kids">KIDZ W<span class="o"></span>RLD</div>
+                <div class="cartitems">
+                    <img src="cart-icon.png" alt="">Cart items(0)
+                </div>
+            </div>
+            <div class="shop">
+                <div style="margin-top:-50px;font-size: clamp(40px,5vw,70px);">Shop.<br>Have Fun.<br>Repeat.<br></div>
+                <br>
+                <div style="font-size: 20px;height:50px;display: flex;align-items: end;">#NewAndNow</div>
+            </div>
+        </div>
+        <div class="books">
+            <div class="discoverbooks">Discover New Books</div>
+            <div class="bookitems">
+                <div class="bimg"></div>
+                <div class="heading">This was Our pact</div>
+                <div class="para">Ryan Andrews</div>
+                <div class="price">
+                    <div>$7.49</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="bookitems">
+                <div class="cimg"></div>
+                <div class="heading">The Famous Five</div>
+                <div class="para">Guid Blyton</div>
+                <div class="price">
+                    <div>$4.59</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="bookitems">
+                <div class="dimg"></div>
+                <div class="heading">Matilda</div>
+                <div class="para">Roald Dahi</div>
+                <div class="price">
+                    <div>$6.80</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="bookitems">
+                <div class="eimg"></div>
+                <div class="heading">Harry Potter</div>
+                <div class="para">JK Rowling</div>
+                <div class="price">
+                    <div>$10</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="bookitems">
+                <div class="fimg"></div>
+                <div class="heading">For Young Readers</div>
+                <div class="para">Ruskin Bond</div>
+                <div class="price">
+                    <div>$7.29</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="bookitems">
+                <div class="gimg"></div>
+                <div class="heading">Wimpy Kid - Diy</div>
+                <div class="para">Jeff Kinney</div>
+                <div class="price">
+                    <div>$4.99</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="games">
+            <div class="discovergames">Discover New Games</div>
+            <div class="gameitems">
+                <div class="dart"></div>
+                <div class="heading">Dart Board</div>
+                <div class="para">Wooden Board, 16 Inches</div>
+                <div class="price">
+                    <div>$17.49</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="gameitems">
+                <div class="four"></div>
+                <div class="heading">Connect 4</div>
+                <div class="para">Board game, multiplayer</div>
+                <div class="price">
+                    <div>$19.99</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="gameitems">
+                <div class="jenga"></div>
+                <div class="heading">Jenga</div>
+                <div class="para">Wooden blocks, 54 pieces</div>
+                <div class="price">
+                    <div>$20.99</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="gameitems">
+                <div class="monopoly"></div>
+                <div class="heading">Monopoly</div>
+                <div class="para">1.61 x 15.75 x 10.51 Inches</div>
+                <div class="price">
+                    <div>$19.49</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="handmade">
+            <div class="discoverhandmade">Handmade With Love</div>
+            <div class="handmadeitems">
+                <div class="bookmarks"></div>
+                <div class="heading">Bookmarks</div>
+                <div class="para">Handmade with love</div>
+                <div class="price">
+                    <div>$12.49</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="handmadeitems">
+                <div class="birth"></div>
+                <div class="heading">Birthday cards</div>
+                <div class="para">Handmade with love</div>
+                <div class="price">
+                    <div>$19.99</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="handmadeitems">
+                <div class="stuffed"></div>
+                <div class="heading">Stuffed toy</div>
+                <div class="para">Handmade with love</div>
+                <div class="price">
+                    <div>$15.99</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="handmadeitems">
+                <div class="dream"></div>
+                <div class="heading">Dream cather drawing</div>
+                <div class="para">Handmade with love</div>
+                <div class="price">
+                    <div>$18.49</div>
+                    <div class="add">Add
+                        <img src="cart-icon-white.png" alt="" style="height:25px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

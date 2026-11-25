@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont {
+            margin: 0 auto;
+            border: 2px solid transparent;
+            margin-top: 100px;
+            height: 600px;
+            width: 1000px;
+            background-image: url("https://img.magnific.com/premium-photo/icc-world-cup-cricket-stadium-background-with-flag-trophy-vector-wallpaper-design-illustration_837518-24426.jpg");
+            background-size: 100%;
+
+        }
+
+        .super {
+            border: 3px solid transparent;
+            width: inherit;
+            height: 100px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            border: 1px solid transparent;
+            height: 80px;
+            width: 200px;
+            display: flex;
+
+        }
+        .logo{
+            border:1px solid transparent;
+            width:70px;
+            height: inherit;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .over{
+            border:1px solid transparent;
+            width:130px;
+            height: inherit;
+            font-size:35px;
+            font-family: sans-serif;
+            font-weight: 700;
+            text-align: center;
+            color: white;
+            font-style:italic ;
+        }
+        .score {
+            border: 3px solid transparent;
+            width: inherit;
+            height: 350px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .india {
+            border: 1px solid transparent;
+            width: 300px;
+            height: 260px;
+            border-radius: 20px;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .pak {
+            border: 1px solid transparent;
+            width: 300px;
+            height: 260px;
+            border-radius: 20px;
+            background-color: green;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .name{
+            border: 1px solid transparent;
+            width: inherit;
+            height:80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 50px;
+            font-family: sans-serif;
+            font-weight: 600;
+        }
+        .round{
+            border: 1px solid transparent;
+            width: inherit;
+            height:80px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .circle{
+            border: 1px solid white;
+            border-radius: 50%;
+            width:30px;
+            height:30px;
+            background-color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 25px;
+            font-family: sans-serif;
+            font-weight: 700;
+
+        }
+        .number{
+            border: 1px solid transparent;
+            width: inherit;
+            height:80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 50px;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+        .buttons {
+            border: 3px solid transparent;
+            width: inherit;
+            height: 150px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+
+        .bat {
+            outline: 1px solid white;
+            height: 75px;
+            width: 75px;
+            border-radius: 20px;
+            background-color: purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .replay {
+            outline: 1px solid white;
+            height: 75px;
+            width: 75px;
+            border-radius: 20px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="super">
+            <div class="text">
+                <div class="logo">
+                    <img src="bat.png" style="height: 120px;">
+                </div>
+                <div class="over">Super Over</div>
+            </div>
+        </div>
+        <div class="score">
+            <div class="india">
+                <div class="name">IND</div>
+                <div class="round">
+                    <div class="circle">4</div>
+                    <div class="circle">3</div>
+                    <div class="circle">2</div>
+                    <div class="circle">6</div>
+                    <div class="circle">6</div>
+                    <div class="circle">6</div>
+                </div>
+                <div class="number">27 / 0</div>
+            </div>
+            <div class="pak">
+                <div class="name">PAK</div>
+                <div class="round">
+                    <div class="circle">2</div>
+                    <div class="circle">4</div>
+                    <div class="circle">0</div>
+                    <div class="circle">3</div>
+                    <div class="circle">1</div>
+                    <div class="circle">4</div>
+                </div>
+                <div class="number">14 / 0</div>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="bat"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 410.68 410.68" xml:space="preserve" width="54px" height="54px" fill="#ffffff" transform="matrix(-1, 0, 0, -1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path style="fill:#ffffff;" d="M124.203,237.148c1.979,1.98,4.624,15.082-5.271,24.979L4.593,376.464 c-6.123,6.124-6.123,16.144,0,22.268l7.355,7.355c6.123,6.123,16.143,6.123,22.267,0l114.339-114.34 c9.896-9.896,22.998-7.25,24.978-5.271L124.203,237.148z"></path> <rect x="44.569" y="311.165" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -211.8256 152.8296)" style="fill:#ffffff;" width="68" height="41.892"></rect> <path style="fill:#ffffff;" d="M39.716,341.341L4.593,376.464c-6.123,6.124-6.123,16.144,0,22.268l7.355,7.355 c6.123,6.123,16.143,6.123,22.267,0l35.123-35.124L39.716,341.341z"></path> </g> <path style="fill:#ffffff;" d="M404.246,92.431c6.295-6.297,8.322-18.03,4.504-26.074l-13.797-29.061 c-3.82-8.043-13.525-17.75-21.57-21.568L344.322,1.93c-8.043-3.819-19.777-1.792-26.072,4.505L114.756,209.927 c-6.296,6.297-6.296,16.6,0,22.896l63.1,63.1c6.297,6.297,16.6,6.297,22.895,0L404.246,92.431z"></path> <path style="fill:#ffffff;" d="M313.525,17.711c-0.414-1.818-0.822-3.61-1.199-5.352L299.775,24.91 c4.086,18.286,7.373,38.393-8.615,54.38c-13.68,13.682-30.959,13.476-49.259,13.25c-3.234-0.04-6.489-0.079-9.728-0.029 l-17.23,17.229c7.414-2.424,16.625-2.322,26.776-2.201c19.647,0.24,41.897,0.508,60.048-17.642 C324.75,66.914,318.264,38.476,313.525,17.711z M272.16,182.581c-20.66,20.552-20.648,42.222-20.639,59.634 c0.001,0.993,0,1.971-0.003,2.942l15.238-15.238c0.731-12.446,3.733-24.518,15.981-36.703 c12.977-12.907,24.691-15.143,38.131-17.409l20.041-20.039c-7.309,2.682-14.322,3.865-21.512,5.075 C304.379,163.37,288.848,165.982,272.16,182.581z"></path> </g> </g></svg></div>
+            <div class="replay">
+                <svg width="64px" height="64px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M391.166 156.304H501.7c228.857 0 422.263 184.597 422.263 403.115C923.963 780.312 742.427 960 519.315 960c-235.128 0-419.278-193.554-419.278-440.625 0-10.564 8.584-19.11 19.109-19.11h113.159c10.602 0 19.11 8.546 19.11 19.11 0 218.781 138.391 296.747 267.9 296.747 134.92 0 253.27-123.2 253.27-263.605 0-131.897-124.059-243.34-270.885-243.34l-106.555-3.227-3.979-149.646z" fill="#ffffff"></path><path d="M407.884 309.176v77.275c0 6.941-3.73 13.267-9.777 16.664-6.011 3.398-13.398 3.209-19.295-0.375L128.305 249.013c-5.71-3.508-9.147-9.669-9.147-16.383 0.078-6.681 3.585-12.876 9.333-16.312L378.998 66.729c5.894-3.542 13.285-3.657 19.221-0.221 6.008 3.358 9.665 9.702 9.665 16.609V309.176z" fill="#ffffff"></path><path d="M439.717 307.301l40.724-150.999h-72.557v150.035z" fill="#ffffff"></path></g></svg>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
